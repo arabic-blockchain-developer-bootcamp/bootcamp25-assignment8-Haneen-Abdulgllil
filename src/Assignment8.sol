@@ -9,7 +9,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 contract Assignment8 is ERC721URIStorage , Ownable{
     // declare a private uint called _tokenIdCounter
 
-    unit private _tokenIdCounter;
+    uint private _tokenIdCounter;
 
     // pass name and symbol of the nft token collection
     constructor() 
@@ -22,7 +22,7 @@ contract Assignment8 is ERC721URIStorage , Ownable{
     // restrict this function to be called only by the owner
     // Hint: You can use OpenZeppelin Ownable contract imported above
     
-    function mintNFT(sring memory isonURI) external onlyOwner returns(uint256) {
+    function mintNFT(string memory jsonURI) external onlyOwner returns(uint256) {
         uint newTokenId = _tokenIdCounter;
         // call _mint to mint a new nft to the function caller
         _mint(msg.sender, newTokenId);
