@@ -14,7 +14,6 @@ contract Assignment8 is ERC721URIStorage , Ownable{
     // pass name and symbol of the nft token collection
     constructor() 
     ERC721("Haneen" , "H")
-    Ownable(msg.sender)
     {}
 
     // make this function visibility: external
